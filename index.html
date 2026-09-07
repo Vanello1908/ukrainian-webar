@@ -30,40 +30,51 @@
 
 <body>
     <a-scene
-        mindar-image="imageTargetSrc: ./targets.mind;"
-        color-space="sRGB"
-        vr-mode-ui="enabled: false"
-        device-orientation-permission-ui="enabled: false"
-    >
+    mindar-image="imageTargetSrc: ./targets.mind;"
+    renderer="
+        antialias: false;
+        precision: mediump;
+        colorManagement: false;
+    "
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
+>
+    <a-assets>
+        <video class="video" id="video1"
+            src="./1.mp4"
+            muted loop playsinline
+            preload="metadata">
+        </video>
 
-        <a-assets>
-            <video class="video" id="video1"
-                   src="./1.mp4" loop playsinline preload="auto"></video>
+        <video class="video" id="video2"
+            src="./2.mp4"
+            muted loop playsinline
+            preload="metadata">
+        </video>
 
-            <video class="video" id="video2"
-                   src="./2.mp4" loop playsinline preload="auto"></video>
+        <video class="video" id="video3"
+            src="./3.mp4"
+            muted loop playsinline
+            preload="metadata">
+        </video>
+    </a-assets>
 
-            <video class="video" id="video3"
-                   src="./3.mp4" loop playsinline preload="auto"></video>
-        </a-assets>
+    <a-camera
+        position="0 0 0"
+        look-controls="enabled: false">
+    </a-camera>
 
-        <a-camera
-            position="0 0 0"
-            look-controls="enabled: false"
-        ></a-camera>
+    <a-entity class="target" mindar-image-target="targetIndex: 0">
+        <a-video src="#video1" width="1" height="0.5625"></a-video>
+    </a-entity>
 
-        <a-entity class="target" mindar-image-target="targetIndex: 0">
-            <a-video src="#video1" width="1" height="0.5625"></a-video>
-        </a-entity>
+    <a-entity class="target" mindar-image-target="targetIndex: 1">
+        <a-video src="#video2" width="1" height="0.5625"></a-video>
+    </a-entity>
 
-        <a-entity class="target" mindar-image-target="targetIndex: 1">
-            <a-video src="#video2" width="1" height="0.5625"></a-video>
-        </a-entity>
-
-        <a-entity class="target" mindar-image-target="targetIndex: 2">
-            <a-video src="#video3" width="1" height="0.5625"></a-video>
-        </a-entity>
-
-    </a-scene>
+    <a-entity class="target" mindar-image-target="targetIndex: 2">
+        <a-video src="#video3" width="1" height="0.5625"></a-video>
+    </a-entity>
+</a-scene>
 </body>
 </html>
