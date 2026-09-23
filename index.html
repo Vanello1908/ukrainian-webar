@@ -1,125 +1,181 @@
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!doctype html>
+<html lang="ua">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald"
+      rel="stylesheet"
+    />
+    <title>Живі сторінки історії</title>
+  </head>
+  <body style="margin: 0px">
+    <header
+      class="flex-row"
+      style="
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        padding: 24px 15%;
+        border-bottom: 1px solid black;
+      "
+    >
+      <img width="130px" height="65px" src="logo.png" alt="" />
+      <nav class="flex-row" style="width: 20%; justify-content: space-between">
+        <a class="heading" href="#">Головна</a>
+        <a class="heading colored" href="#">Галерея</a>
+        <a class="heading" href="#">Автор</a>
+      </nav>
+    </header>
+    <img
+      src="bg.png"
+      alt=""
+      style="position: absolute; top: 64px; width: 100%; z-index: 10"
+    />
+    <main
+      class="flex-column"
+      style="height: 850px; padding: 0px 15%; align-items: center"
+    >
+      <h1 class="heading" style="font-size: 150px">ВІРТУАЛЬНИЙ МУЗЕЙ</h1>
+      <div
+        class="flex-row"
+        style="width: 80%; justify-content: space-between; margin-top: 64px"
+      >
+        <div
+          class="flex-column"
+          style="align-items: start; justify-content: center"
+        >
+          <span class="colored font-subheader"> Фотографії: </span>
+          <span class="font-subheader"> Сергій Єрмаков </span>
+        </div>
+        <div class="flex-row" style="align-items: center">
+          <img width="128px" src="ar_logo.png" alt="" />
+          <span class="font-header">AR</span>
+        </div>
+      </div>
+    </main>
 
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <div
+      id="guide"
+      class="flex-column"
+      style="align-items: center; padding: 50px 15%"
+    >
+      <span class="font-header">ЯК ЦЕ ПРАЦЮЄ?</span>
+      <div
+        class="flex-row"
+        style="width: 100%; padding-top: 30px; justify-content: space-between"
+      >
+        <div class="flex-column" style="width: 35%">
+          <span class="font-subheader"
+            ><span class="font-subheader colored">01</span>— ОБЕРІТЬ
+            ФОТОГРАФІЮ</span
+          >
+          <p>Перегляньте галерею і оберіть найцікавіший кадр.</p>
+          <span class="font-subheader"
+            ><span class="font-subheader colored">02</span> — ВІДКРИЙТЕ
+            КАМЕРУ</span
+          >
+          <p>Наведіть камеру смартфона на фотографію.</p>
+          <span class="font-subheader"
+            >03 —
+            <span class="font-subheader colored">ПОБАЧТЕ ІСТОРІЮ</span></span
+          >
+          <p>
+            Коли зображення розпізнається, фотографія оживе — і ви побачите
+            відео, пов'язане з цим моментом.
+          </p>
+        </div>
+        <div
+          class="flex-column"
+          style="width: 35%; background: var(--bg-color); padding: 32px"
+        >
+          <div class="flex-row" style="justify-content: space-between">
+            <div class="flex-column">
+              <span class="font-subheader colored">ВІДКРИЙТЕ</span>
+              <span class="font-subheader">СКАНЕР</span>
+              <span class="font-subheader colored">НА ТЕЛЕФОНІ</span>
+            </div>
+            <img width="180px" src="qrcode.svg" />
+          </div>
+          <p>
+            Кожен кадр зберігає лише одну мить. Але за нею завжди є рух, звук,
+            люди та події, які не потрапили в об'єктив.<br />
+            Наведіть камеру смартфона на фотографію — і дозвольте їй ожити.
+          </p>
+        </div>
+      </div>
+    </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const targets = document.querySelectorAll(".target");
-            const videos = document.querySelectorAll(".video");
+    <div id="gallery" class="flex-column" style="align-items: center">
+      <span class="font-header">AR ГАЛЕРЕЯ</span>
+      <span>Фотографія зберігає мить.</span>
+      <span
+        >AR дозволяє
+        <span class="colored"><b>побачити її продовження.</b></span></span
+      >
+      <div
+        style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin: 24px 0px;"
+      >
+      <img src="images/1.jpg" width="384" alt="">
+      <img src="images/2.jpg" width="384" alt="">
+      <img src="images/3.jpg" width="384" alt="">
+      <img src="images/4.jpg" width="384" alt="">
+      <img src="images/5.jpg" width="384" alt="">
+      <img src="images/6.jpg" width="384" alt="">
+      <img src="images/7.jpg" width="384" alt="">
+      <img src="images/8.jpg" width="384" alt="">
+      <img src="images/9.jpg" width="384" alt="">
+    </div>
+    </div>
 
-            for (let i = 0; i < targets.length; i++) {
-                targets[i].addEventListener("targetFound", () => {
-                    console.log(`Target ${i} found`);
-
-                    videos[i].play().catch(console.error);
-                });
-
-                targets[i].addEventListener("targetLost", () => {
-                    videos[i].pause();
-                    videos[i].currentTime = 0;
-                });
-            }
-        });
-    </script>
-</head>
-
-<body>
-    <a-scene
-    mindar-image="imageTargetSrc: ./targets.mind;"
-    vr-mode-ui="enabled: false"
-    device-orientation-permission-ui="enabled: false"
->
-    <a-assets>
-        <video class="video" id="video1"
-            src="./1.mp4"
-         loop playsinline>
-        </video>
-
-        <video class="video" id="video2"
-            src="./2.mp4"
-         loop playsinline>
-        </video>
-
-        <video class="video" id="video3"
-            src="./3.mp4"
-         loop playsinline>
-        </video>
-
-        <video class="video" id="video4"
-            src="./4.mp4"
-         loop playsinline>
-        </video>
-
-        <video class="video" id="video5"
-            src="./5.mp4"
-         loop playsinline>
-        </video>
-
-        <video class="video" id="video6"
-            src="./6.mp4"
-         loop playsinline>
-        </video>
-
-        <video class="video" id="video7"
-            src="./7.mp4"
-         loop playsinline>
-        </video>
-
-        <video class="video" id="video8"
-            src="./8.mp4"
-         loop playsinline>
-        </video>
-
-        <video class="video" id="video9"
-            src="./9.mp4"
-         loop playsinline>
-        </video>
-    </a-assets>
-
-    <a-camera
-        position="0 0 0"
-        look-controls="enabled: false">
-    </a-camera>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 0">
-        <a-video src="#video1" width="1" height="0.66667"></a-video>
-    </a-entity>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 1">
-        <a-video src="#video2" width="1" height="0.66667"></a-video>
-    </a-entity>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 2">
-        <a-video src="#video3" width="1" height="0.66667"></a-video>
-    </a-entity>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 3">
-        <a-video src="#video4" width="1" height="0.66667"></a-video>
-    </a-entity>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 4">
-        <a-video src="#video5" width="1" height="0.66667"></a-video>
-    </a-entity>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 5">
-        <a-video src="#video6" width="1" height="0.66667"></a-video>
-    </a-entity>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 6">
-        <a-video src="#video7" width="1" height="0.66667"></a-video>
-    </a-entity>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 7">
-        <a-video src="#video8" width="1" height="0.66667"></a-video>
-    </a-entity>
-
-    <a-entity class="target" mindar-image-target="targetIndex: 8">
-        <a-video src="#video9" width="1" height="0.66667"></a-video>
-    </a-entity>
-</a-scene>
-</body>
+    <footer
+      class="flex-column"
+      style="
+        background-color: var(--bg-color);
+        align-items: center;
+        padding: 8px 15%;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <img width="240px" height="120px" src="logo.png" alt="" />
+        <p style="width: 60%">
+          Фотографія зберігає мить.<br />
+          AR допомагає почути її знову.<br />
+          "Живі сторінки історії" — про фотографії Сергія Єрмакова, що фіксують
+          людей, події та моменти російсько-української війни. Наведіть камеру
+          на знімок, щоб побачити його ожилим — і відчути історію трохи
+          ближче.<br /><br />
+          Пам’ятаємо. Зберігаємо. Оживляємо історію.
+        </p>
+        <nav
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-evenly;
+            align-self: stretch;
+          "
+        >
+          <a class="heading" href="#">Головна</a>
+          <a class="heading colored" href="#">Галерея</a>
+          <a class="heading" href="#">Автор</a>
+        </nav>
+      </div>
+      <span class="colored"><b>&copy; 2026 «Живі сторінки історії»</b> </span>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,48 @@
+:root {
+  --color: #437abe;
+  --bg-color: #b3cef0;
+}
+
+* {
+  font-family: "Mulish";
+  font-size: 20px;
+}
+
+.colored {
+  color: var(--color);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.heading {
+  font-family: "Oswald";
+  font-weight: 700;
+  margin: 0px;
+}
+
+.font-header {
+  font-size: 100px;
+  font-family: "Oswald";
+  font-weight: 700;
+  margin: 0px;
+}
+
+.font-subheader {
+  font-size: 40px;
+  font-family: "Oswald";
+  font-weight: 700;
+  margin: 0px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
