@@ -46,3 +46,7 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.justify {
+  text-align: justify;
+}
