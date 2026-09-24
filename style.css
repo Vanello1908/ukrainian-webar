@@ -50,3 +50,9 @@ a {
 .justify {
   text-align: justify;
 }
+
+.grid-image {
+  height: 256px;
+  cursor: pointer;
+}
+

@@ -18,6 +18,44 @@
     <title>Живі сторінки історії</title>
   </head>
   <body style="margin: 0px">
+    <div
+      id="list"
+      style="
+        display: none;
+        flex-direction: row;
+        position: fixed;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        margin-top: -300px;
+        margin-left: -800px;
+        width: 1600px;
+        height: 600px;
+        border-top-right-radius: 64px;
+        border-bottom-right-radius: 64px;
+        z-index: 1001;
+      "
+    >
+      <img id="selected-img" src="images/1.jpg" alt="" />
+      <div class="flex-column" style="margin: 32px">
+        <span id="selected-header" class="font-subheader colored">Header</span>
+        <p id="selected-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti,
+          dolor. Quod reprehenderit officia quae, a praesentium est porro ea ab!
+        </p>
+      </div>
+    </div>
+    <div
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 1000;
+      "
+      id="overflow"
+    ></div>
+
     <header
       class="flex-row"
       style="
@@ -208,13 +246,14 @@
         </p>
       </div>
       <p>
-        <span class="colored"><b>З початку повномасштабної війни</b></span> всі
-        працівники редакції ІА <span class="colored">"Хроніки"</span> виїхали з
-        Харкова, залишився тільки редактор - Сергій Єрмаков. Зараз навантаження
-        сильно зросло - треба працювати за всіх, хто виїхав, але фото з місць
-        влучань російських авіабомб, ракет, снарядів та дронів, реакцію на них
-        харків'ян я постіно роблю. Іноді, як дозволяє робочий графік, виїжджаю
-        на позиції захисників України.<br /><br />
+        <span class="colored"><b>З початку повномасштабної війни</b></span>
+        всі працівники редакції ІА
+        <span class="colored">"Хроніки"</span> виїхали з Харкова, залишився
+        тільки редактор - Сергій Єрмаков. Зараз навантаження сильно зросло -
+        треба працювати за всіх, хто виїхав, але фото з місць влучань російських
+        авіабомб, ракет, снарядів та дронів, реакцію на них харків'ян я постіно
+        роблю. Іноді, як дозволяє робочий графік, виїжджаю на позиції захисників
+        України.<br /><br />
         <span class="colored"><b>Фотографія продовжується.</b></span>
       </p>
     </div>
@@ -261,8 +300,5 @@
       </div>
       <span class="colored"><b>&copy; 2026 «Живі сторінки історії»</b> </span>
     </footer>
-    <div hidden>
-      
-    </div>
   </body>
 </html>
