@@ -101,7 +101,9 @@ const texts = [
 
 function resize() {
   const zoomLevel = window.devicePixelRatio;
-  const targetZoom = 1 / zoomLevel;
+  const height = window.screen.height * devicePixelRatio;
+  const targetHeightZoom = height / 1080;
+  const targetZoom = (1 / zoomLevel) / targetHeightZoom;
   document.body.style.zoom = `${targetZoom}`;
 }
 
